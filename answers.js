@@ -76,7 +76,58 @@ for (const turtle of ninjaTurtles) {
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 
+'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+// Console log: the index of Titanic
+console.log(favMovies.indexOf('Titanic')); // Index of Titanic: 8 // The indexOf() method of String values searches this string and returns the index of the first occurrence of the specified substring.
 
+// 1-Use the .sort method
+favMovies.sort();
+console.log(favMovies);
+// 1- what did this do to the array? Did it permanently alter it? This method sorts the array in alphabetical order and permanently alert it.
+
+//2- Use the method pop
+favMovies.pop();
+console.log(favMovies);// pop() :  removes the last element from the array which is 'Volver'
+
+//3- Push "Guardians of the Galaxy"
+favMovies.push('Guardians of the Galaxy');
+console.log(favMovies);// push(): add element 'Guardians of the Galaxy' to final elemnt in the array 
+
+//4- Reverse the array
+favMovies.reverse();
+console.log(favMovies);//reverses the order of the elements in an array.
+//5- Use the shift method
+favMovies.shift();
+console.log(favMovies);//removes the first element from the array which is 'Guardians of the Galaxy'
+
+//6- Unshift - what does it return? It returns the new length of the array which is 'The Godfather'
+const unshiftReturn = favMovies.unshift('The Godfather');
+console.log(favMovies); 
+console.log(unshiftReturn); // Unshift returns: 19/ unshift adds new elements to the beginning of an array and returns the new length of the array.
+
+// 7-Splice "Django Unchained" and add "Avatar"
+const djangoIndex = favMovies.indexOf('Django Unchained');
+if (djangoIndex !== -1) {
+    favMovies.splice(djangoIndex, 1, 'Avatar');// The splice() method of Array instances changes the contents of an array by removing or replacing existing elements and/or adding new .
+}
+console.log(favMovies);// 8-Thought question: did this permanently alter our array? ==> Yes, splice permanently alters our array.
+
+// 9- Slice the last half of the array 
+console.log(lastHalf);// The slice() method copies a given part of an array and returns that copied part as a new array. It doesn’t change the original array.
+const lastHalf = favMovies.slice(0,8);
+console.log(favMovies);
+// 9- what is going on here? ==> Slice does not permanently alter the array.
+
+// 10-Console log your final results
+console.log(favMovies);
+
+// 11-After running the above tasks, console.log the index of "Fast and Furious"
+console.log(favMovies.indexOf('Fast and Furious')); // 
+//Q1- what value do we get when we look for the index of something that is not in the array?
+//A1- When looking for an index of an element that doesn't exist, it returns -1.
+//Q2-that we declared the variable favMovies with const, and yet, we were allowed to change the array. Weird? Should we have used let?
+//A2-Using let would allow the reference to the array to be changed as well, but it is not necessary here because we only need to modify the contents, not the reference. 
 
 ////////////////////////////////
 // Where is Waldo
