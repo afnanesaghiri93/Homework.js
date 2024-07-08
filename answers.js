@@ -1,5 +1,5 @@
 // Homework for 07/06/2024
-// 
+
 
 // Part II: JavaScript Reps
 ////////////////////////////////
@@ -49,10 +49,10 @@ const sharky = ["Sharky", "shark", 20, "Left Coast"];
 const plantee = ["Plantee", "plant", 5000, "Mordor"];
 const porgee = ["Porgee", "Porg", 186, "Ahch-To"];
 const dart = ["D'Art", "Demogorgan Dog", 2, "Upside Down"];
-plantee.splice(2, 1, plantee[2] + 1); // Change Plantee's age is now 5001
-wolfy.splice(3,1,"Gotham City" ); //Change Wolfy's hometown is now "Gotham City"
-dart.splice(4,0,"Hawkins");//Give D'Art a second hometown by adding "Hawkins"
-wolfy.splice(0,1,"Gameboy");//Remove "Wolfy" from the wolfy array and replace it with "Gameboy".
+plantee.splice(2, 1, plantee[2] + 1); //1- Change Plantee's age is now 5001
+wolfy.splice(3,1,"Gotham City" ); //2-Change Wolfy's hometown is now "Gotham City"
+dart.splice(4,0,"Hawkins");//3-Give D'Art a second hometown by adding "Hawkins"
+wolfy.splice(0,1,"Gameboy");//4-Remove "Wolfy" from the wolfy array and replace it with "Gameboy".
 
 console.log(plantee); // ["Plantee", "plant", 5001, "Mordor"]
 console.log(wolfy); // ["Gameboy", "wolf", 16, "Gotham City"]
@@ -66,8 +66,9 @@ console.log(sharky);//[ 'Sharky', 'shark', 20, 'Left Coast' ]
 ////////////////////////////////
 // Yell at the Ninja Turtles
 ////////////////////////////////
-// Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
+// 1-Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
 const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
+//2- Use a for of loop (not a typo - try it out! Try a for of loop) to call toUpperCase() on each of them and print out the result.
 for (const turtle of ninjaTurtles) {
     console.log(turtle.toUpperCase());
 }//DONATELLO, LEONARDO, RAPHAEL, MICHAELANGELO
@@ -114,8 +115,9 @@ if (djangoIndex !== -1) {
 console.log(favMovies);// 8-Thought question: did this permanently alter our array? ==> Yes, splice permanently alters our array.
 
 // 9- Slice the last half of the array 
-console.log(lastHalf);// The slice() method copies a given part of an array and returns that copied part as a new array. It doesn’t change the original array.
 const lastHalf = favMovies.slice(0,8);
+console.log(lastHalf);// The slice() method copies a given part of an array and returns that copied part as a new array. It doesn’t change the original array.
+
 console.log(favMovies);
 // 9- what is going on here? ==> Slice does not permanently alter the array.
 
@@ -132,13 +134,55 @@ console.log(favMovies.indexOf('Fast and Furious')); //
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
+//1- Remove Eggbert (hint look at the slice/splice method(s))
+const whereIsWaldo = [
+    ["Timmy", "Frank"], "Eggbert",
+    ["Lucinda", "Jacc", "Neff", "Snoop"],
+    ["Petunia", ["Baked Goods", "Waldo"]]
+];
+
+whereIsWaldo.splice(1, 1);
+console.log( whereIsWaldo);
+//2- Change "Neff" to "No One"
+//3-Access and console.log "Waldo"
+
+
+
 
 
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
+//1-Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
+//console.log("Love me, pet me! HSSSSSS!");
+
+const phrase =  [
+    "...human...why you taking pictures of me?...", 
+    "...the catnip made me do it...", 
+    "...why does the red dot always get away..."
+];
+
+
+for (let i = 1; i <= 20; i++) {
+    if (i % 2 === 0) {
+    const randomIndex = Math.floor(Math.random() * phrase.length);
+    console.log(phrase[randomIndex]);
+} 
+else {
+    console.log("Love me, pet me! HSSSSSS!");
+    }
+}
+
+
 
 
 ////////////////////////////////
 //  Find the Median
+////////////////////////////////
+
+
+
+
+////////////////////////////////
+//  Hungry for More?
 ////////////////////////////////
