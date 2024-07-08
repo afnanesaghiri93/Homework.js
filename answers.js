@@ -1,5 +1,5 @@
 // Homework for 07/06/2024
-
+// Name : Afnane Saghiri
 
 // Part II: JavaScript Reps
 ////////////////////////////////
@@ -20,22 +20,34 @@ for (let i = 0; i <= 200; i++ ) {// Write a for loop that will log only the even
 ////////////////////////////////
 // Fizz Buzz
 ////////////////////////////////
-//Using a switch statement
-for (let i = 1; i <= 100; i++) {//1-Write a javascript application that logs all numbers from 1 - 100
-    switch (true) {
-        case (i % 3 === 0 && i % 5 === 0):
-            console.log('FizzBuzz');//4-If a number is divisible by 3 and 5 log "FizzBuzz" instead of the number.
-            break;
-        case (i % 3 === 0):
-            console.log('Fizz');//2-If a number is divisible by 3 log "Fizz" instead of the number.
-            break;
-        case (i % 5 === 0):
-            console.log('Buzz');//3-If a number is divisible by 5 log "Buzz" instead of the number.
-            break;
-        default:
-            console.log(i);
+// Using if..else statement
+for (let i = 1; i <= 100; i++) {
+    if (i % 15 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
     }
 }
+//Using a switch statement
+// for (let i = 1; i <= 100; i++) {//1-Write a javascript application that logs all numbers from 1 - 100
+//     switch (true) {
+//         case (i % 3 === 0 && i % 5 === 0):
+//             console.log('FizzBuzz');//4-If a number is divisible by 3 and 5 log "FizzBuzz" instead of the number.
+//             break;
+//         case (i % 3 === 0):
+//             console.log('Fizz');//2-If a number is divisible by 3 log "Fizz" instead of the number.
+//             break;
+//         case (i % 5 === 0):
+//             console.log('Buzz');//3-If a number is divisible by 5 log "Buzz" instead of the number.
+//             break;
+//         default:
+//             console.log(i);
+//     }
+// }
 
 ////////////////////////////////
 // Wild Wild Life
@@ -182,7 +194,14 @@ else {
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
-
+//1- Find the median number in the following numsarray, then console.log that number
+const nums = [14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12, 17, 12, 71, 18, 15, 12];
+nums.sort();
+console.log(nums);
+//2-hint if you check the length of the array / 2, you might get not get a whole number. In which case, look into Math.floor( // something )q
+const middleIndex = Math.floor(nums.length / 2);
+console.log (middleIndex);
+// I didn't determine the median number yet
 
 
 
