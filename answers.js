@@ -144,8 +144,11 @@ const whereIsWaldo = [
 whereIsWaldo.splice(1, 1);
 console.log( whereIsWaldo);
 //2- Change "Neff" to "No One"
+whereIsWaldo[1].splice(2, 1,"No One");//splice method is used to replace the element at index 2 of the 2nd array
+console.log(whereIsWaldo)// [["Timmy", "Frank"],["Lucinda", "Jacc", "No One", "Snoop"],["Petunia", ["Baked Goods", "Waldo"]]]
 //3-Access and console.log "Waldo"
-
+const waldo = whereIsWaldo[2][1][1];
+console.log(waldo);
 
 
 
@@ -165,8 +168,8 @@ const phrase =  [
 
 for (let i = 1; i <= 20; i++) {
     if (i % 2 === 0) {
-    const randomIndex = Math.floor(Math.random() * phrase.length);
-    console.log(phrase[randomIndex]);
+    const randomIndex = Math.floor(Math.random() * phrase.length);// Math.random() static method returns a floating-point, pseudo-random number that's greater than or equal to 0 and less than 1, with approximately uniform distribution over that range
+    console.log(phrase[randomIndex]);//Math.floor() static method always rounds down and returns the largest integer less than or equal to a given number.
 } 
 else {
     console.log("Love me, pet me! HSSSSSS!");
